@@ -1,0 +1,20 @@
+---
+title: "Regex for Email Validation in Python"
+date: 2023-12-08
+draft: false
+---
+
+Use Python's `re` module to validate an email address format:
+
+```python
+import re
+
+def validate_email(email):
+    pattern = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+    return re.match(pattern, email) is not None
+
+print(validate_email('example@example.com'))  # Output: True
+print(validate_email('invalid-email'))        # Output: False
+```
+
+This simple function checks if an email follows a valid structure.

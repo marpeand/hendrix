@@ -1,0 +1,14 @@
+---
+title: "Batch File Renaming with Bash"
+date: 2023-12-05
+draft: false
+---
+
+Rename multiple files in a directory, replacing spaces with underscores:
+
+```bash
+#!/bin/bash
+for f in *\ *; do
+    mv "$f" "$(echo $f | tr ' ' '_')"
+done
+```

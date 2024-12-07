@@ -1,0 +1,21 @@
+---
+title: "Parallel Processing in Python"
+date: 2023-12-06
+draft: false
+---
+
+Speed up data processing by parallelizing tasks using `concurrent.futures`:
+
+```python
+from concurrent.futures import ProcessPoolExecutor
+
+def square(x):
+    return x * x
+
+with ProcessPoolExecutor() as executor:
+    results = list(executor.map(square, range(10)))
+
+print(results)
+```
+
+This will calculate the square of numbers in parallel, speeding up the process for larger datasets.

@@ -1,0 +1,17 @@
+---
+title: "Complex SQL Query with Joins"
+date: 2023-12-09
+draft: false
+---
+
+Retrieve user information along with their last login time using a join:
+
+```sql
+SELECT users.name, users.email, logins.last_login
+FROM users
+JOIN logins ON users.id = logins.user_id
+WHERE logins.last_login > '2023-01-01'
+ORDER BY logins.last_login DESC;
+```
+
+This query retrieves users who have logged in after January 1st, 2023, with their most recent login.

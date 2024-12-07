@@ -1,0 +1,46 @@
+---
+title: "Beyond REST Exploring GraphQL for Modern APIs"
+date: 2023-11-10
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra tellus vel sagittis mattis. Suspendisse porta faucibus maximus. Suspendisse ut cursus nisl, vitae facilisis nisl."
+draft: false
+tags:
+  - Mathematics
+  - Signal Processing
+---
+
+## Lorem ipsum
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Duis varius velit fermentum, scelerisque tellus a, fermentum nulla.
+Nullam a velit tincidunt, semper orci eget, malesuada est.
+Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+```python
+import requests
+import json
+import os
+from flask import Flask
+
+query_todo = """query MyQuery {
+    todo(where: {id: "ckz8d4mlc0qjq0b13gcgbieni"}) {
+        description
+        completed
+    }
+}
+"""
+
+url = "https://api-<region>.hygraph.com/v2/<some hash>/master" # paste your Content API endpoint
+token = os.getenv("HYGRAPH_TOKEN")
+headers = {"Authorization": f"Bearer {token}"}
+app = Flask(__name__)
+
+@app.route("/get_todo")
+def get_todo():
+    payload = {"query": query_todo}
+    r = requests.post(url, json=payload, headers=headers)
+    json_data = r.json()
+    return {"todo text": json_data["data"]["todo"]["description"]}
+
+```
+
+## dolor sit amet

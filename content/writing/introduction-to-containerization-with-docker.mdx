@@ -1,0 +1,47 @@
+---
+title: "Introduction to Containerization with Docker"
+date: 2023-12-10
+description: "Learn the basics of Docker and how it simplifies application deployment through containerization."
+draft: false
+tags:
+  - Docker
+  - DevOps
+  - Programming
+---
+
+Docker is a tool that enables containerization, a method of packaging applications and their dependencies into isolated environments. This ensures consistency across development, testing, and production.
+
+### Why Use Docker?
+
+1. **Portability**: Containers run consistently across different environments.
+2. **Isolation**: Separate applications from each other and the host system.
+3. **Efficiency**: Lightweight and faster to start compared to virtual machines.
+
+### Example: Dockerfile for a Python App
+
+Here’s a simple Dockerfile to containerize a Python application:
+
+```dockerfile
+# Use an official Python runtime as the base image
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the application files
+COPY . /app
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Run the application
+CMD ["python", "app.py"]
+```
+
+### Getting Started
+
+1. Install Docker.
+   Build the image: docker build -t my-python-app .
+   Run the container: docker run -p 5000:5000 my-python-app
+
+Docker streamlines workflows, making it an essential skill for modern developers.

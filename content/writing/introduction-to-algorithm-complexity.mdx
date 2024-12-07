@@ -1,0 +1,41 @@
+---
+title: "Introduction to Algorithm Complexity: Big O Explained"
+date: 2023-12-25
+description: "Learn how to analyze algorithms using Big O notation to understand their efficiency."
+draft: false
+tags:
+  - Algorithms
+  - Big O Notation
+  - Programming
+---
+
+Big O notation helps us analyze the efficiency of algorithms by describing their time or space complexity. It allows developers to predict performance as input sizes grow.
+
+### Common Complexities
+
+1. **O(1)**: Constant time, unaffected by input size.
+2. **O(log n)**: Logarithmic time, as seen in binary search.
+3. **O(n)**: Linear time, common in simple loops.
+4. **O(n^2)**: Quadratic time, seen in nested loops.
+
+### Example: Linear Search
+
+Here’s an example of O(n) complexity in Python:
+
+```python
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+
+numbers = [4, 2, 7, 1, 9]
+print(linear_search(numbers, 7))  # Output: 2
+```
+
+### Optimizing Algorithms
+
+- Use data structures like hash tables to reduce search times.
+- Break down nested loops when possible to improve performance.
+
+Understanding algorithm complexity is critical for building fast and scalable software solutions.

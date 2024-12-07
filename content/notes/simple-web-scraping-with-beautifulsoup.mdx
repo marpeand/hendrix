@@ -1,0 +1,21 @@
+---
+title: "Simple Web Scraping with BeautifulSoup"
+date: 2023-12-10
+draft: false
+---
+
+Scrape all links from a webpage using Python and BeautifulSoup:
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://example.com'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+
+links = [a['href'] for a in soup.find_all('a', href=True)]
+print(links)
+```
+
+This script will collect all URLs from a specified webpage.

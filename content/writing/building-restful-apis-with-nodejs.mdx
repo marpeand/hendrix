@@ -1,0 +1,51 @@
+---
+title: "Building RESTful APIs with Node.js and Express"
+date: 2023-12-20
+description: "A practical guide to building scalable RESTful APIs using Node.js and Express.js."
+draft: false
+tags:
+  - REST APIs
+  - Node.js
+  - Programming
+---
+
+RESTful APIs are the backbone of many web applications. With Node.js and Express.js, you can build efficient and scalable APIs quickly and effectively.
+
+### Setting Up
+
+Start by initializing your project and installing Express:
+
+```bash
+mkdir my-api
+cd my-api
+npm init -y
+npm install express
+
+Basic API Example
+
+Here’s a simple example of a REST API with Express:
+
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.use(express.json());
+
+// Sample endpoint
+app.get('/api', (req, res) => {
+    res.json({ message: 'Welcome to the API!' });
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
+```
+
+### Key Features of Express APIs
+
+- Routing: Define clear endpoints for different resources.
+- Middleware: Add custom logic for processing requests.
+- Scalability: Integrate with databases and external services.
+
+By understanding the core principles and leveraging Node.js tools, you can create robust RESTful APIs for any application.

@@ -1,0 +1,18 @@
+---
+title: "Automated Backup Script"
+date: 2023-12-07
+draft: false
+---
+
+Create a backup of your home directory to an external drive and compress it:
+
+```bash
+#!/bin/bash
+BACKUP_DIR="/path/to/backup"
+SOURCE_DIR="$HOME"
+DATE=$(date +'%Y-%m-%d')
+
+tar -czf "$BACKUP_DIR/backup-$DATE.tar.gz" -C "$SOURCE_DIR" .
+```
+
+This script will create a timestamped compressed backup file.
