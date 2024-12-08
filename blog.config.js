@@ -1,6 +1,7 @@
 const CONFIG = {
   title: "Hendrix",
-  siteDescription: "Blog and portfolio created with Next.js and Tailwind CSS",
+  siteDescription:
+    "Personal dark and light mode blog and portfolio template build using NextJS & TailwindCSS.",
   baseURL: "https://hendrix-template.vercel.app",
   darkBackground: "#111111",
   logo: "/logo.png", // upload your logo in /public folder

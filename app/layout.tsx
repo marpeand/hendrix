@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: CONFIG.title,
     template: `%s | ${CONFIG.title}`,
   },
-  description: CONFIG.description,
+  description: CONFIG.siteDescription,
   metadataBase: new URL(CONFIG.baseURL),
   openGraph: {
     title: CONFIG.title,
@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang={CONFIG.language} className={inter.className}>
       <body className="dark:bg-dark bg-white text-white max-w-6xl flex flex-col mx-auto">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
