@@ -11,6 +11,7 @@ import { slug } from "github-slugger";
 import { RelatedPosts } from "@/app/components/RelatedPosts";
 import { Undo2 } from "lucide-react";
 import PageContainer from "@/app/components/PageContainer";
+import Tags from "@/app/components/Tags";
 
 export async function generateMetadata({
   params,
@@ -51,19 +52,7 @@ export default function Post({ params }) {
   return (
     <PageContainer>
       <div className="w-full min-h-screen">
-        <div className="flex flex-row space-x-2 pb-4">
-          {post.tags.map((tag) => {
-            return (
-              <Link
-                key={tag}
-                className="text-xs dark:text-white/50 border-dark/30 text-dark/80 px-2 py-1 rounded-full border dark:border-white/10 hover:border-dark/80 transition-colors"
-                href={`/categories/${slug(tag)}`}
-              >
-                {tag}
-              </Link>
-            );
-          })}
-        </div>
+        <Tags tags={post.tags} showTags={false} />
         <div className="flex translate-x-[-50px]">
           <Link
             href={"/writing"}
