@@ -1,7 +1,7 @@
 import { Rubik } from "next/font/google";
 import { cn } from "../lib/cn";
 import Image from "next/image";
-import CONFIG, { logo, social } from "@/blog.config";
+import CONFIG, { social } from "@/blog.config";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -36,11 +36,11 @@ export function Biography() {
       )}
     >
       <Image
-        src={logo}
+        src={CONFIG.byography.avatar}
         alt="Avatar"
-        width={45}
-        height={45}
-        className="rounded-full mb-6 flex sm:hidden"
+        width={100}
+        height={100}
+        className="rounded-full mb-6 flex sm:hidden h-12 w-12"
       />
       <h1 className="text-4xl font-bold mb-4 text-gray-50 max-w-2xl">
         {title}
@@ -50,11 +50,11 @@ export function Biography() {
       </p>
       <div className="flex items-center">
         <Image
-          src="/avatar.jpeg"
+          src={CONFIG.byography.avatar}
           alt="Avatar"
-          width={45}
-          height={45}
-          className="rounded-full mr-6 hidden sm:flex"
+          width={100}
+          height={100}
+          className="rounded-full mr-6 hidden sm:flex h-12 w-12"
         />
         <div className="flex flex-wrap gap-x-10 sm:gap-x-4 ">
           {Object.entries(social).map(([key, link]) => (

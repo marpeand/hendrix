@@ -1,19 +1,21 @@
 const CONFIG = {
   title: "Hendrix",
   siteDescription: "Blog and portfolio created with Next.js and Tailwind CSS",
-  baseURL: "https://hendrix.vercel.app",
+  baseURL: "https://hendrix-template.vercel.app",
   darkBackground: "#111111",
   logo: "/logo.png", // upload your logo in /public folder
+
   language: "en",
   email: "myemail@example.com",
 
   byography: {
     title: "Hendrix Blog Template",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-      Cras condimentum aliquet lectus, id pharetra massa condimentum sed. \
-      Quisque tincidunt ut ante id faucibus. \
-      Aliquam mattis justo massa, sit amet dignissim mauris tincidunt quis.",
+      "Modern blog template built with Next.js and Tailwind CSS. \
+      It features a clean design, responsive layout, and easy navigation. \
+      Users can create and manage posts, projects, and notes seamlessly. \
+      The template is customizable and includes social media integration.",
+    avatar: "/avatar.png", // upload your avatar in /public folder
   },
   social: {
     github: "https://www.github.com/marpeand/hendrix",
