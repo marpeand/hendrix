@@ -8,10 +8,12 @@ export function ViewMoreButton({ href, text }: { href: string; text: string }) {
       href={href}
       role="button"
     >
-      <span className="flex text-sm font-semibold text-white/60">{text}</span>
+      <span className="flex text-sm font-semibold dark:text-white/60 text-dark/70">
+        {text}
+      </span>
       <IoMdArrowDropright
         size={20}
-        className="text-white/60 group-hover:translate-x-1 transition ease-in-out delay-2000 h-5 w-5"
+        className="dark:text-white/60 text-dark/70 group-hover:translate-x-1 transition ease-in-out delay-2000 h-5 w-5"
       />
     </Link>
   );

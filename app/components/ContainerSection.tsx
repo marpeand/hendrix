@@ -17,7 +17,7 @@ export function ContainerSection({
 }: ContainerProps) {
   return (
     <section className="flex flex-col md:flex-row items-start justify-center w-full py-10 text-left flex">
-      <h2 className="text-xl font-bold mb-6 w-2/6 flex items-center">
+      <h2 className="text-xl font-semibold mb-6 w-2/6 flex items-center dark:text-foreground-50 text-dark">
         {icon}
         {title}
       </h2>

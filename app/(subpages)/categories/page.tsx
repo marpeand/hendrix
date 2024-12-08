@@ -20,17 +20,21 @@ export default function TagsPage() {
 
   return (
     <PageContainer>
-      <h1 className="text-4xl font-bold mb-8 text-white">Categories</h1>
+      <h1 className="text-4xl font-bold mb-8 dark:text-foreground-50 text-dark">
+        Categories
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {sortedTags.map(([tag, count]) => (
           <Link
             key={tag}
             href={`/categories/${slug(tag)}`}
-            className="bg-white/5 hover:bg-white/10 transition-colors p-4 rounded-lg"
+            className="bg-dark/5 dark:bg-white/5 transition-colors p-4 rounded-lg"
           >
             <div className="flex flex-col">
-              <span className="font-semibold text-white">{tag}</span>
-              <span className="text-sm text-white/50">
+              <span className="font-semibold dark:text-foreground-50 text-dark">
+                {tag}
+              </span>
+              <span className="text-sm dark:text-white/50 text-dark/50">
                 {count} post{count !== 1 ? "s" : ""}
               </span>
             </div>

@@ -5,7 +5,6 @@ import { MdxRenderer } from "@/app/components/Mdx";
 import type { Metadata } from "next";
 import CONFIG from "@/blog.config";
 import { format } from "date-fns";
-import { GithubIcon } from "lucide-react";
 import PageContainer from "@/app/components/PageContainer";
 
 export async function generateMetadata({
@@ -20,19 +19,19 @@ export async function generateMetadata({
 
   return {
     title,
-    description, // Added description for better SEO
+    description,
     openGraph: {
       title,
-      description, // Added description for better SEO
+      description,
       type: "article",
       url: `${CONFIG.baseURL}/${slug}`,
-      images: [`${CONFIG.baseURL}/images/${slug}.jpg`], // Assuming images are stored in a specific path
+      images: [`${CONFIG.baseURL}/images/${slug}.jpg`],
     },
     twitter: {
       card: "summary_large_image",
       title,
-      description, // Added description for better SEO
-      images: [`${CONFIG.baseURL}/images/${slug}.jpg`], // Assuming images are stored in a specific path
+      description,
+      images: [`${CONFIG.baseURL}/images/${slug}.jpg`],
     },
   };
 }
@@ -46,8 +45,12 @@ export default function Post({ params }) {
 
   return (
     <PageContainer>
-      <span className="font-medium text-foreground-400">Project</span>
-      <h1 className="text-2xl font-bold mb-2">{project.title}</h1>
+      <span className="font-medium dark:text-foreground-400 text-dark/30">
+        Project
+      </span>
+      <h1 className="text-2xl font-bold mb-2 dark:text-foreground-50 text-dark">
+        {project.title}
+      </h1>
 
       <div className="flex space-x-2 text-foreground-400">
         <span>{format(new Date(project.date), "dd/MM/yy")}</span>
@@ -61,7 +64,7 @@ export default function Post({ params }) {
           </>
         )}
       </div>
-      <article className="mt-10 prose prose-invert">
+      <article className="mt-10 prose dark:prose-invert">
         <MdxRenderer source={project.body.code} />
       </article>
     </PageContainer>

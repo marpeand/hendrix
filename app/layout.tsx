@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import Footer from "./components/Footer";
 import CONFIG from "@/blog.config";
 import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -55,13 +56,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="bg-dark text-white max-w-6xl flex flex-col mx-auto">
-        <Header />
-        <main className="flex items-center my-6 flex flex-col mx-4">
-          {children}
-        </main>
-        <Footer />
-        <Analytics />
+      <body className="dark:bg-dark bg-white text-white max-w-6xl flex flex-col mx-auto">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Header />
+          <main className="flex items-center my-6 flex flex-col mx-4">
+            {children}
+          </main>
+          <Footer />
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

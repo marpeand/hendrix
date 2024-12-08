@@ -15,7 +15,7 @@ export const SocialLink: React.FC<SocialLinkProps> = ({ link, name }) => {
 
   return (
     <a
-      className="py-1 text-sm text-white/60 hover:text-white transition-colors"
+      className="py-1 text-sm dark:text-white/60 text-dark/60 hover:text-dark/80 transition-colors"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
@@ -42,10 +42,10 @@ export function Biography() {
         height={100}
         className="rounded-full mb-6 flex sm:hidden h-12 w-12"
       />
-      <h1 className="text-4xl font-bold mb-4 text-gray-50 max-w-2xl">
+      <h1 className="text-4xl font-bold mb-4 dark:text-foreground-50 text-dark max-w-2xl">
         {title}
       </h1>
-      <p className="md:text-lg mb-8 text-foreground-300 max-w-2xl">
+      <p className="md:text-lg mb-8 text-foreground-400 dark:text-foreground-300 max-w-2xl">
         {description}
       </p>
       <div className="flex items-center">

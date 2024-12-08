@@ -19,7 +19,9 @@ const CategoriesPage = ({ params }) => {
 
   return (
     <PageContainer>
-      <h1 className="text-2xl mb-10 font-bold capitalize"># {params.tag}</h1>
+      <h1 className="text-2xl mb-10 font-bold capitalize dark:text-foreground-50 text-dark">
+        # {params.tag}
+      </h1>
       <ul className="mt-5 justify-center space-y-2">
         {filteredPosts.map((post) => (
           <li key={post.slug}>

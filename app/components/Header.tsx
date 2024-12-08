@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ModeToggle } from "./ThemeSwitcher";
 
 const navItems = {
   "/about": {
@@ -18,7 +19,7 @@ function NavItem({ path, name }: { path: string; name: string }) {
     <Link
       key={path}
       href={path}
-      className="capitalize text-white/60 hover:text-white transition-colors"
+      className="capitalize dark:text-white/60 text-dark/60 hover:text-dark/80 transition-colors"
     >
       {name}
     </Link>
@@ -37,10 +38,11 @@ export function Header() {
           className="h-8 w-8"
         ></Image>
       </Link>
-      <nav className="flex flex-row space-x-6">
+      <nav className="flex flex-row space-x-6 items-center">
         {Object.entries(navItems).map(([path, { name }]) => {
           return <NavItem key={path} path={path} name={name} />;
         })}
+        <ModeToggle />
       </nav>
     </header>
   );

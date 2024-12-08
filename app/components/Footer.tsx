@@ -37,7 +37,7 @@ export default function Footer() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm text-white/60 hover:text-white transition-colors"
+                  className="text-sm dark:text-white/60 text-dark/60 hover:text-dark/80 transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -49,7 +49,7 @@ export default function Footer() {
                 <Link
                   key={key}
                   href={link as string}
-                  className="text-sm text-white/60 hover:text-white transition-colors"
+                  className="text-sm dark:text-white/60 text-dark/60 hover:text-dark/80 transition-colors"
                 >
                   {key.charAt(0).toUpperCase() + key.slice(1)}
                 </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           <div className="text-center">
-            <p className="text-sm text-white/40">
+            <p className="text-sm dark:text-white/40 text-dark/60">
               © {new Date().getFullYear()} {CONFIG.title} All rights reserved.
             </p>
           </div>

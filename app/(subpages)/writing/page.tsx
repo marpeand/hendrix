@@ -1,9 +1,8 @@
-import { allPosts, allProjects } from "@/.contentlayer/generated";
+import { allPosts } from "@/.contentlayer/generated";
 import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
 import { PostCard } from "../../components/PostCard";
-import { LuPenTool } from "react-icons/lu";
 import { Undo2 } from "lucide-react";
 import PageContainer from "@/app/components/PageContainer";
 
@@ -20,10 +19,12 @@ const Page = () => {
         <Link href={"/"}>
           <Undo2
             size={1000}
-            className="h-8 w-8 mr-4 bg-foreground-500 p-2 rounded-md hover:bg-foreground-400/30"
+            className="h-8 w-8 mr-4 bg-foreground-300 p-2 rounded-md hover:bg-foreground-400/30 dark:bg-dark/50 dark:hover:bg-dark/10"
           />
         </Link>
-        <h1 className="text-2xl font-bold">Writings</h1>
+        <h1 className="text-2xl font-bold dark:text-foreground-50 text-dark">
+          Writings
+        </h1>
       </div>
       <div>
         {filteredPosts

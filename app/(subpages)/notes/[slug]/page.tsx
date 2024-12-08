@@ -41,12 +41,16 @@ export default function Post({ params }) {
 
   return (
     <PageContainer>
-      <span className="font-medium text-foreground-400">Note</span>
-      <h1 className="text-2xl font-bold">{note.title}</h1>
-      <div className="flex space-x-2 text-foreground-400">
+      <span className="font-medium dark:text-foreground-400 text-dark/30">
+        Note
+      </span>
+      <h1 className="text-2xl font-bold dark:text-foreground-50 text-dark">
+        {note.title}
+      </h1>
+      <div className="flex space-x-2 dark:text-foreground-400 text-dark/30">
         <span>{format(new Date(note.date), "dd/MM/yy")}</span>
       </div>
-      <article className="mt-10 prose prose-invert">
+      <article className="mt-10 prose dark:prose-invert">
         <MdxRenderer source={note.body.code} />
       </article>
     </PageContainer>

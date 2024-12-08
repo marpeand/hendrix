@@ -11,7 +11,9 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <PageContainer>
-      <h1 className="text-2xl mb-10 font-bold">Projects</h1>
+      <h1 className="text-2xl mb-10 font-bold dark:text-foreground-50 text-dark">
+        Projects
+      </h1>
       <div className="min-h-screen space-y-4">
         {allProjects.map((project) => (
           <ProjectCard project={project} key={project._id}></ProjectCard>

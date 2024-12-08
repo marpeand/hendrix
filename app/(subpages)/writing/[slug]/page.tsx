@@ -56,7 +56,7 @@ export default function Post({ params }) {
             return (
               <Link
                 key={tag}
-                className="text-xs text-white/50 px-2 py-1 rounded-full border border-white/10 hover:border-foreground-400"
+                className="text-xs dark:text-white/50 border-dark/30 text-dark/80 px-2 py-1 rounded-full border dark:border-white/10 hover:border-dark/80 transition-colors"
                 href={`/categories/${slug(tag)}`}
               >
                 {tag}
@@ -72,24 +72,26 @@ export default function Post({ params }) {
           >
             <Undo2
               size={1000}
-              className="h-8 w-8 mr-4 bg-foreground-500 p-2 rounded-md hover:bg-foreground-400/30"
+              className="h-8 w-8 mr-4 bg-foreground-200 p-2 rounded-md hover:bg-foreground-400/30 dark:bg-foreground-600 dark:hover:bg-foreground-500"
             />
           </Link>
-          <h1 className="text-2xl font-bold mb-1">{post.title}</h1>
+          <h1 className="text-2xl font-bold mb-1 dark:text-foreground-50 text-dark">
+            {post.title}
+          </h1>
         </div>
 
-        <div className="flex space-x-2 text-foreground-400">
+        <div className="flex space-x-2 dark:text-foreground-400 text-dark/60">
           <span>{format(new Date(post.date), "dd/MM/yy")}</span>
           <span className="font-bold mx-2">·</span>
           <span>{post.readingTime.text}</span>
         </div>
-        <article className="mt-10 prose prose-invert">
+        <article className="mt-10 prose dark:prose-invert">
           <MdxRenderer source={post.body.code} />
         </article>
         <ShareAndBack href={href} />
       </div>
       <div className="w-full  py-10  items-center">
-        <h2 className="mb-4 font-bold text-xl underline underline-offset-4">
+        <h2 className="mb-4 font-bold text-xl underline underline-offset-4 dark:text-foreground-50 text-dark">
           Related Posts
         </h2>
         <RelatedPosts tags={post.tags} slug={post.slug} showTags={false} />
@@ -100,14 +102,14 @@ export default function Post({ params }) {
 
 const ShareAndBack = ({ href }) => {
   return (
-    <div className="text-foreground-400 mt-10 ">
+    <div className="dark:text-foreground-400 mt-10 text-dark/60">
       <div className="space-x-1">
         <span className="font-light">&gt; </span>
         <span>share post on</span>
         <a
           href={href}
           target="_blank"
-          className="text-white/80 hover:underline hover:text-white/100"
+          className="text-dark/80 hover:underline hover:text-dark/90 dark:text-foreground-400 dark:hover:text-foreground-50"
         >
           X(twitter)
         </a>
@@ -116,7 +118,7 @@ const ShareAndBack = ({ href }) => {
         <span className="font-light">&gt; </span>
         <Link
           href="/writing"
-          className="text-white/80  hover:underline hover:text-white/100"
+          className="text-dark/80 hover:underline hover:text-dark/90 dark:text-foreground-400 dark:hover:text-foreground-50"
         >
           ← Go to Writings
         </Link>

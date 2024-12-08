@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <PageContainer>
-      <article className="prose prose-invert mx-auto">
+      <article className="prose dark:prose-invert mx-auto">
         <MdxRenderer source={allAbouts[0].body.code} />
       </article>
     </PageContainer>

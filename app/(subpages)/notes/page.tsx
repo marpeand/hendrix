@@ -14,7 +14,9 @@ const Page = () => {
   return (
     <PageContainer>
       <div className="flex items-center mb-10 ">
-        <h1 className="text-2xl font-bold">Notes</h1>
+        <h1 className="text-2xl font-bold dark:text-foreground-50 text-dark">
+          Notes
+        </h1>
         <FaRegStickyNote size={20} className="ml-2" />
       </div>
       <div className="md:max-w-2xl mx-auto min-h-screen space-y-6">
