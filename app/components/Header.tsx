@@ -33,10 +33,11 @@ export function Header() {
         <Image
           src={"/logo.png"}
           alt=""
-          width={1000}
-          height={1000}
+          width={250}
+          height={250}
           className="h-8 w-8"
-        ></Image>
+          aria-label="Logo"
+        />
       </Link>
       <nav className="flex flex-row space-x-6 items-center">
         {Object.entries(navItems).map(([path, { name }]) => {
