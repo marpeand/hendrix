@@ -107,6 +107,8 @@ tags:
 ---
 ```
 
+![Post Page](/public/post-page-screenshot.png)
+
 ### Projects
 
 List your personal side projects in the `content/projects` folder, here it's an example of these.
@@ -125,6 +127,18 @@ title: "Gamify Your Life"
 description: "A productivity application that turns daily tasks and goals into a gamified experience with levels, achievements, and rewards."
 date: 2023-12-15
 github: https://github.com/marpeand/gamify-your-life
+---
+```
+
+### Notes
+
+List your notes in the `content/notes` folder, here it's an example of these.
+
+```
+---
+title: "Note Title"
+date: 2023-12-15
+draft: false
 ---
 ```
 
