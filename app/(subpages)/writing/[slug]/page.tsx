@@ -52,7 +52,7 @@ export default function Post({ params }) {
   return (
     <PageContainer>
       <div className="w-full min-h-screen">
-        <Tags tags={post.tags} showTags={false} />
+        <Tags tags={post.tags} showTags={true} />
         <div className="flex translate-x-[-50px]">
           <Link
             href={"/writing"}
