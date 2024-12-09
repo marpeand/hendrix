@@ -1,14 +1,14 @@
 {
-  "name": "hendrix",
+  "name": "hendrix-template",
   "author": "@marpeand",
-  "description": "",
+  "description": "Modern blog template built with NextJS and TailwindCSS.",
   "homepage": "https://github.com/marpeand/hendrix",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && tsx scripts/rss.ts",
     "start": "next start",
     "lint": "next lint"
   },
