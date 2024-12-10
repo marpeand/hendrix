@@ -19,7 +19,7 @@ const Page = () => {
         <Link href={"/"}>
           <Undo2
             size={1000}
-            className="h-8 w-8 mr-4 bg-foreground-300 p-2 rounded-md hover:bg-foreground-400/30 dark:bg-dark/50 dark:hover:bg-dark/10"
+            className="h-8 w-8 mr-4 bg-foreground-200 p-2 rounded-md hover:bg-foreground-400/30 dark:bg-foreground-600 dark:hover:bg-foreground-500"
           />
         </Link>
         <h1 className="text-2xl font-bold dark:text-foreground-50 text-dark">

@@ -15,7 +15,7 @@ export default function Tags({
           <Link
             key={index}
             href={`/categories/${slug(tag)}`}
-            className="text-xs dark:text-white/50 border-dark/30 text-dark/80 px-2 py-1 rounded-full border dark:border-white/10  hover:border-dark/80 transition-colors"
+            className="text-xs dark:text-white/50 border-dark/30 text-dark/80 px-2 py-1 rounded-full border dark:border-white/10 dark:hover:border-white/30 hover:border-dark/80"
           >
             {tag}
           </Link>

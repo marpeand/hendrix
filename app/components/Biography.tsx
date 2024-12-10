@@ -15,7 +15,7 @@ export const SocialLink: React.FC<SocialLinkProps> = ({ link, name }) => {
 
   return (
     <a
-      className="py-1 text-sm dark:text-white/60 text-dark/60 hover:text-dark/80 transition-colors"
+      className="py-1 text-sm dark:text-white/60 dark:hover:text-white/80 text-dark/60 hover:text-dark/80 transition-colors"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
@@ -26,7 +26,7 @@ export const SocialLink: React.FC<SocialLinkProps> = ({ link, name }) => {
 };
 
 export function Biography() {
-  const { title, description } = CONFIG.byography;
+  const { title, description } = CONFIG.biography;
 
   return (
     <div
@@ -36,7 +36,7 @@ export function Biography() {
       )}
     >
       <Image
-        src={CONFIG.byography.avatar}
+        src={CONFIG.biography.avatar}
         alt="Avatar"
         width={100}
         height={100}
@@ -50,7 +50,7 @@ export function Biography() {
       </p>
       <div className="flex items-center">
         <Image
-          src={CONFIG.byography.avatar}
+          src={CONFIG.biography.avatar}
           alt="Avatar"
           width={100}
           height={100}

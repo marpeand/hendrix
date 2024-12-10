@@ -9,7 +9,7 @@ const CONFIG = {
   language: "en",
   email: "myemail@example.com",
 
-  byography: {
+  biography: {
     title: "Hendrix Blog Template",
     description:
       "Modern blog template built with Next.js and Tailwind CSS. \

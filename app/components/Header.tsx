@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ModeToggle } from "./ThemeSwitcher";
+import CONFIG from "@/blog.config";
 
 const navItems = {
   "/about": {
@@ -19,7 +20,7 @@ function NavItem({ path, name }: { path: string; name: string }) {
     <Link
       key={path}
       href={path}
-      className="capitalize dark:text-white/60 text-dark/60 hover:text-dark/80 transition-colors"
+      className="capitalize dark:text-white/60 text-dark/60 dark:hover:text-white/80 hover:text-dark/80"
     >
       {name}
     </Link>
@@ -31,10 +32,10 @@ export function Header() {
     <header className="my-8 mx-4 flex items-center justify-between">
       <Link href={"/"}>
         <Image
-          src={"/logo.png"}
-          alt=""
-          width={250}
-          height={250}
+          src={CONFIG.logo}
+          alt="Logo"
+          width={50}
+          height={50}
           className="h-8 w-8"
           aria-label="Logo"
         />
