@@ -7,7 +7,6 @@ import { format } from "date-fns";
 import CONFIG from "@/blog.config";
 import Link from "next/link";
 
-import { slug } from "github-slugger";
 import { RelatedPosts } from "@/app/components/RelatedPosts";
 import { Undo2 } from "lucide-react";
 import PageContainer from "@/app/components/PageContainer";
@@ -79,12 +78,7 @@ export default function Post({ params }) {
         </article>
         <ShareAndBack href={href} />
       </div>
-      <div className="w-full  py-10  items-center">
-        <h2 className="mb-4 font-bold text-xl underline underline-offset-4 dark:text-foreground-50 text-dark">
-          Related Posts
-        </h2>
-        <RelatedPosts tags={post.tags} slug={post.slug} showTags={false} />
-      </div>
+      <RelatedPosts tags={post.tags} slug={post.slug} showTags={false} />
     </PageContainer>
   );
 }
