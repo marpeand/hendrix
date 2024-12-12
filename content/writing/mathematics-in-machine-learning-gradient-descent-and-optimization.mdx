@@ -1,0 +1,118 @@
+---
+title: "Mathematics in Machine Learning: Gradient Descent and Optimization"
+date: 2023-12-20
+description: "An exploration of the mathematical principles behind gradient descent and optimization algorithms in machine learning."
+draft: false
+tags:
+  - Mathematics
+  - Machine Learning
+  - Optimization
+---
+
+## Introduction
+
+Machine learning relies heavily on mathematics, with optimization playing a central role in model training. Gradient descent is one of the most widely used optimization algorithms. In this post, we'll explore the mathematical foundation of gradient descent and its applications in machine learning.
+
+## Gradient Descent Algorithm
+
+Gradient descent is an iterative optimization algorithm used to minimize a cost function $J(\theta)$ by updating parameters $\theta$ in the direction of the steepest descent.
+
+The update rule is:
+
+$$
+\theta := \theta - \alpha \nabla J(\theta),
+$$
+
+where:
+
+- $\theta$ is the parameter vector,
+- $\alpha$ is the learning rate,
+- $\nabla J(\theta)$ is the gradient of the cost function with respect to $\theta$.
+
+### Example
+
+Consider the quadratic cost function:
+
+$$
+J(\theta) = \frac{1}{2} \theta^2.
+$$
+
+The gradient is:
+
+$$
+\nabla J(\theta) = \frac{d}{d\theta} \left( \frac{1}{2} \theta^2 \right) = \theta.
+$$
+
+Using gradient descent, the update rule becomes:
+
+$$
+\theta := \theta - \alpha \theta.
+$$
+
+This results in exponential decay of $\theta$ over iterations.
+
+## Application to Machine Learning
+
+In machine learning, the cost function often represents the error between predictions and actual values. For linear regression, the cost function is:
+
+$$
+J(\theta) = \frac{1}{m} \sum_{i=1}^m \left( h_{\theta}(x^{(i)}) - y^{(i)} \right)^2,
+$$
+
+where $h_{\theta}(x^{(i)}) = \theta^T x^{(i)}$ is the hypothesis function.
+
+The gradient for $\theta$ is:
+
+$$
+\nabla J(\theta) = \frac{1}{m} \sum_{i=1}^m \left( h_{\theta}(x^{(i)}) - y^{(i)} \right) x^{(i)}.
+$$
+
+By iteratively applying the gradient descent update rule, we find the optimal $\theta$ that minimizes the cost function.
+
+## Types of Gradient Descent
+
+1. **Batch Gradient Descent**:
+
+   - Uses the entire dataset to compute the gradient.
+   - Converges steadily but can be slow for large datasets.
+
+2. **Stochastic Gradient Descent (SGD)**:
+
+   - Updates parameters using one data point at a time.
+   - Faster but introduces noise in convergence.
+
+3. **Mini-batch Gradient Descent**:
+   - A compromise between batch and SGD, using small subsets of data.
+
+## Advanced Optimizers
+
+In modern machine learning, advanced variants of gradient descent are commonly used:
+
+1. **Momentum**:
+
+   - Accumulates a velocity vector to accelerate convergence.
+   - Update rule:
+
+     $$
+     v := \beta v + \nabla J(\theta), \quad \theta := \theta - \alpha v,
+     $$
+
+     where $\beta$ is the momentum coefficient.
+
+2. **Adam Optimizer**:
+   - Combines momentum with adaptive learning rates.
+   - Update rule involves weighted averages of gradients and their squares.
+
+## Applications in Neural Networks
+
+Gradient descent powers the backpropagation algorithm in neural networks. By computing gradients layer by layer, it adjusts weights to minimize the loss function.
+
+For a neural network with weights $W$ and biases $b$, the updates are:
+
+$$
+W := W - \alpha \frac{\partial J}{\partial W}, \quad b := b - \alpha \frac{\partial J}{\partial b}.
+$$
+
+## Conclusion
+
+The mathematical principles of gradient descent and optimization are foundational to machine learning. By mastering these concepts, you can better understand how models learn and improve their performance.
