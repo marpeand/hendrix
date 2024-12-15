@@ -16,7 +16,7 @@ const Page = () => {
       </h1>
       <div className="min-h-screen space-y-4">
         {allProjects.map((project) => (
-          <ProjectCard project={project} key={project._id}></ProjectCard>
+          <ProjectCard project={project} key={project._id} />
         ))}
       </div>
     </PageContainer>

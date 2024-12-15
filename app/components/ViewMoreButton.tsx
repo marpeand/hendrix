@@ -4,7 +4,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 export function ViewMoreButton({ href, text }: { href: string; text: string }) {
   return (
     <Link
-      className="flex group flex-row text-foreground-100 items-center w-48 " // Set a fixed width and center the button
+      className="flex group flex-row text-foreground-100 items-center w-48 "
       href={href}
       role="button"
     >

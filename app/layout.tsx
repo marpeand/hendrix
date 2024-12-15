@@ -20,16 +20,8 @@ export const metadata: Metadata = {
     title: CONFIG.title,
     url: CONFIG.baseURL,
     siteName: `${CONFIG.title}'s website`,
-    locale: "en_US",
+    locale: CONFIG.language,
     type: "website",
-    images: [
-      {
-        url: `${CONFIG.baseURL}/opengraph-image`,
-        width: 1200,
-        height: 630,
-        alt: `${CONFIG.title}'s website`,
-      },
-    ],
   },
   robots: {
     index: true,

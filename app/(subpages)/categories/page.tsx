@@ -9,10 +9,8 @@ export const metadata: Metadata = {
 };
 
 export default function TagsPage() {
-  // Create a map to store tag counts
   const tagCounts = new Map<string, number>();
 
-  // Count occurrences of each tag
   allPosts.forEach((post) => {
     post.tags.forEach((tag) => {
       tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
