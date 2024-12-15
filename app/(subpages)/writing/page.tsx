@@ -7,8 +7,8 @@ import { Undo2 } from "lucide-react";
 import PageContainer from "@/app/components/PageContainer";
 
 export const metadata: Metadata = {
-  title: "Projects",
-  description: "A list of my personal projects",
+  title: "Writings",
+  description: "A list of all my posts",
 };
 
 const Page = () => {

@@ -1,4 +1,4 @@
-import { allNotes, allPosts } from "@/.contentlayer/generated";
+import { allNotes } from "@/.contentlayer/generated";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 

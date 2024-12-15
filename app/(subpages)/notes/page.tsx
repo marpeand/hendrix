@@ -6,7 +6,7 @@ import PageContainer from "@/app/components/PageContainer";
 
 export const metadata: Metadata = {
   title: "Notes",
-  description: "A list of my personal projects",
+  description: "A list of all my notes",
 };
 
 const Page = () => {

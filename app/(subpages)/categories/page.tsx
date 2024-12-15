@@ -2,6 +2,11 @@ import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { slug } from "github-slugger";
 import PageContainer from "@/app/components/PageContainer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Categories",
+};
 
 export default function TagsPage() {
   // Create a map to store tag counts
