@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { HTMLAttributes } from "react";
+import { CopyButton } from "./CopyButton";
 import { cn } from "../lib/cn";
-import { CopyButton } from "./CoppyButton";
 
 interface PreProps extends React.HTMLProps<HTMLPreElement> {
   __rawString__?: string;
