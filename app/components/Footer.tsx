@@ -49,7 +49,7 @@ export default function Footer() {
                 <Link
                   key={key}
                   href={link as string}
-                  className="text-sm dark:text-white/60 text-dark/60 hover:text-dark/80 transition-colors"
+                  className="text-sm dark:text-white/60 text-dark/60 dark:hover:text-white/80 hover:text-dark/80"
                 >
                   {key.charAt(0).toUpperCase() + key.slice(1)}
                 </Link>
